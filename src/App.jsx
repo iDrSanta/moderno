@@ -1,4 +1,7 @@
 import headerLogo from './assets/images/header__logo.png';
+import SearchIcon from '@material-ui/icons/Search';
+import SearchI from './assets/images/search.svg';
+import searchBg from './assets/images/search-bg.jpg';
 
 const navMenu = [
   'Home',
@@ -60,6 +63,25 @@ function App() {
           </div>
         </div>
       </header>
+      <section className="search" style={{ backgroundImage: `url(${searchBg})` }}>
+        <div className="container">
+          <div className="search__inner">
+            <div className="search__inner-title">Welcome To Foxtar Market Place!</div>
+            <div className="search__inner-text">
+              Premium WordPress Themes, Web Templates and Many More ...
+            </div>
+            <div className="search__inner-form">
+              <form action="">
+                <input type="text" placeholder="Search Your Keywords . . ." required />
+                <button type="submit">
+                  <img src={SearchI} alt="search" />
+                  {/* <SearchIcon color="action" /> */}
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
